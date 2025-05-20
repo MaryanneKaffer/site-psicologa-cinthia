@@ -17,11 +17,11 @@ export default function NavbarComponent({ scrolled }: { scrolled: number }) {
     }, [scrolled]);
 
     return (
-        <section className={`fixed z-20 bg-[#8c947d] top-0 left-0 text-xl sm:flex lg:h-[65px] h-[50px] py-5 transition-collors duration-500 lg:px-10 p-2 ${nonTransparentNav ? "bg-[#e7e5e4] text-[#8c947d]" : "bg-transparent text-white"} lg:w-[97vw] md:w-[94vw] w-[90vw] rounded-3xl flex place-items-center mx-5 mt-2`}>
-            <div className="lg:text-xl md:text-lg flex justify-self-start">
-                <p className="xl:w-[250px] lg:w-[150px] md:w-[70px] w-[30vw] flex justify-self-start px-4 cursor-default">LOGO</p>
+        <nav className={`fixed z-20 bg-[#8c947d] w-full sm:max-w-[70vw] max-w-[85vw] top-3 justify-self-center text-xl sm:flex lg:h-[65px] h-[50px] transition-collors duration-500 lg:px-4 ${nonTransparentNav ? "bg-[#e7e5e4] text-[#8c947d]" : "bg-transparent text-white"} rounded-full flex justify-between items-center px-6`}>
+            <div className="lg:text-xl md:text-lg">
+                <p className="xl:w-[13vw] flex md:px-4 justify-center cursor-default">LOGO</p>
             </div>
-            <div className="hidden flex md:flex xl:gap-[50px] md:gap-[35px] justify-self-center mx-auto" >
+            <div className="hidden flex lg:flex xl:gap-[50px] md:gap-[20px] justify-self-center mx-auto" >
                 {navItems.map((item) => (
                     <div key={item.label}>
                         <Link color="foreground" href={item.href} className="xl:text-xl lg:text-lg md:text-md relative group">
@@ -32,11 +32,8 @@ export default function NavbarComponent({ scrolled }: { scrolled: number }) {
                 ))}
             </div>
             <div>
-                <Button radius="full" className="xl:w-[250px] lg:w-[220] md:w-[150px] text-lg bg-[#667561] md:text-sm lg:text-lg md:flex hidden transition-shadow duration-1000 hover:shadow-lg text-white">Agende sua sessão <FaLongArrowAltRight /></Button>
-                <div className="md:hidden md:w-[58vw] w-[56vw] flex gap-2">
-                    <Button radius="full" className="ml-auto text-sm bg-[#667561] transition-shadow duration-1000 hover:shadow-lg text-white">Agendamento <FaLongArrowAltRight /></Button>
-                    <Button radius="full" className="bg-[#667561] text-white leading-none min-w-[40px] h-[42px]" size="sm" onPress={() => setIsMenuOpen(!isMenuOpen)}><IoIosMenu size={23} /></Button>
-                </div>
+                <Button radius="full" className={`xl:w-[13vw] transition-collors text-lg ${nonTransparentNav ? "bg-[#667561] text-white" : "bg-white text-[#667561]"} md:text-sm lg:text-[15px] xl:text-lg lg:flex hidden`}><span className="xl:flex gap-3 place-items-center hidden">Agende sua sessão <FaLongArrowAltRight /></span><span className="xl:hidden">Agendamento</span></Button>
+                <button className="bg-transparent text-white lg:hidden leading-none transition transform active:scale-85 flex place-self-center" onClick={() => setIsMenuOpen(!isMenuOpen)}><IoIosMenu size={30} className={`${nonTransparentNav ? "text-[#667561]" : "text-white"}`} /></button>
             </div>
             {isMenuOpen && (
                 <Modal isOpen={isMenuOpen} radius="none" onOpenChange={() => setIsMenuOpen(false)} className="font-ramillas !p-0 !m-0" hideCloseButton>
@@ -49,16 +46,17 @@ export default function NavbarComponent({ scrolled }: { scrolled: number }) {
                             <ModalBody>
                                 {navMenuItems.map((item) => (
                                     <div key={item.label}>
-                                        <Link href={item.href} className="xl:text-xl text-xl">
+                                        <Link href={item.href} className="text-xl">
                                             <p className="text-[#8c947d]">{item.label}</p>
                                         </Link>
                                     </div>
                                 ))}
+                                <Button radius="full" className="bg-[#667561] text-white text-lg mt-auto mb-5">Agende sua sessão <FaLongArrowAltRight /></Button>
                             </ModalBody>
                         </>
                     </ModalContent>
                 </Modal>
             )}
-        </section >
+        </nav >
     );
 }

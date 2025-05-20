@@ -16,3 +16,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
+html {
+    scrollbar-gutter: stable;
+}
+
+.swiper-pagination-bullet {
+    background-color: #667561 !important;
+    opacity: 0.5;
+}

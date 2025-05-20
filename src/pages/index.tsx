@@ -3,6 +3,7 @@ import Cover from "@/components/mainPage/cover";
 import FeedBacks from "@/components/mainPage/feedBacks";
 import NavbarComponent from "@/components/mainPage/navbar";
 import Quote from "@/components/mainPage/quote";
+import Layout from "@/styles/layout";
 import { useEffect, useState } from "react";
 
 export default function IndexPage() {
@@ -22,12 +23,12 @@ export default function IndexPage() {
 
 
   return (
-    <section className="font-ramillas bg-[#e7e5e4] overflow-x-hidden overflow-y-hidden scroll-smooth">
+    <Layout >
       <NavbarComponent scrolled={scroll} />
       <Cover />
       <AboutMe />
       <Quote />
       <FeedBacks />
-    </section>
+    </Layout>
   );
 }

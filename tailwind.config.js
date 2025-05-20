@@ -2,6 +2,7 @@ import { heroui } from "@heroui/theme"
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: 'jit',
   content: [
     "./index.html",
     './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,6 +15,9 @@ export default {
       fontFamily: {
         ramillas: ['ramillas', 'sans-serif'],
         ramillasItalic: ['ramillasItalic', 'sans-serif'],
+      },
+      screens: {
+        lgxl: "1600px", 
       },
     },
   },
