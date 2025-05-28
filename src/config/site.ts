@@ -9,15 +9,11 @@ export const navItems = [
     href: "/",
   },
   {
-    label: "Para Empresas",
+    label: "Serviços",
     href: "/",
   },
   {
-    label: "FAQ",
-    href: "/",
-  },
-  {
-    label: "Contato",
+    label: "Dúvidas",
     href: "/",
   },
 ]

@@ -1,18 +1,31 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-
+import NavbarComponent from "./navbar";
+import { Button } from "@heroui/button";
+import { RiShareBoxLine } from "react-icons/ri";
 
 export default function Cover() {
-    const { scrollYProgress } = useScroll();
-    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.6]);
 
     return (
-        <motion.div style={{ scale }}>
-            <section className="bg-[#8c947d] h-[100dvh] text-white sm:rounded-b-[100px] rounded-b-[50px] px-10 relative flex justify-center text-center overflow-hidden px-30" >
-                <div className="sm:max-w-[70vw] max-w-[85vw] flex flex-col">
-                    <h1 className=" lg:text-[13vh] text-[12vh] xl:leading-normal leading-[75px] font-ramillasItalic tracking-tight xl:mt-[20vh] mt-[16vh]">Cinthia <span className="font-bold">Correia</span></h1>
-                    <img draggable={false} src="/assets/coverPicture.png" alt="cover picture" className="sm:h-[80vh] lg:h-[85vh] object-cover absolute -bottom-[10vh] self-center" />
+        <section className="bg-[#8c947d] h-[102dvh] text-white rounded-b-3xl px-10 relative flex justify-center text-center overflow-hidden px-30" >
+            <NavbarComponent />
+            <div className="sm:max-w-[75vw] max-w-[85vw] flex">
+                <div className="flex flex-col lg:w-[500px] xl:w-[700px] text-left gap-3 mt-auto mb-60">
+                    <div className="flex place-items-center gap-5">
+                        <p className="w-[25%] lg:text-[16px] xl:text-[22px]">TERAPIA ONLINE</p>
+                        <span className="h-[2px] bg-white w-[73.5%]"></span>
+                    </div>
+                    <h1 className="xl:text-7xl lg:text-[48px] font-garamond">
+                        Cinthia Caroline Correia, Psicóloga Clínica
+                    </h1>
+                    <h2 className="lg:text-[16px] xl:text-[22px] mt-5">
+                        Especialista em Terapia Cognitiva Comportamental, Saúde Mental e Comportamento. Te ajudo construir uma relação mais consciente,
+                        leve e verdadeira com você mesmo(a) e com quem está ao seu redor.
+                    </h2>
+                    <Button radius="md" className={`lg:w-[198px] lg:h-[37px] xl:h-[50px] xl:w-[250px] lg:text-[16px] xl:text-[22px] mt-2 bg-[#A3B18A] text-white p-0`}>
+                        <RiShareBoxLine />Agende uma sessão
+                    </Button>
                 </div>
-            </section>
-        </motion.div>
+                <img draggable={false} src="/assets/coverPicture.png" alt="cover picture" className="h-[90%] object-cover mt-44 ml-auto" />
+            </div>
+        </section>
     )
 }

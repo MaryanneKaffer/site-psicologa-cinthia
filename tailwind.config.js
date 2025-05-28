@@ -13,8 +13,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        ramillas: ['ramillas', 'sans-serif'],
-        ramillasItalic: ['ramillasItalic', 'sans-serif'],
+        questrial: ['questrial', 'sans-serif'],
+        garamond: ['garamond', 'sans-serif'],
       },
       screens: {
         lgxl: "1600px", 

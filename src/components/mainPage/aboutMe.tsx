@@ -20,7 +20,7 @@ export default function AboutMe() {
                 <img src="/assets/aboutMePicture.png" alt="Cinthia Correia" className="rounded-xl hover:scale-105 transition-all duration-500 ease-in-out
                     lg:static xl:h-[70vh] lg:w-[30vw] lg:h-[60vh] lgxl:w-auto sm:w-[50vw] md:w-[50vw] w-[65vw] absolute left-0 top-10 object-cover" />
                 <div className="flex flex-col lgxl:gap-[3.5vh] lg:gap-[0.6vh] ">
-                    <h1 className="text-[5vh] xl:text-[6.5vh] font-ramillasItalic md:text-black tracking-tight lg:static absolute sm:top-[38vh] top-[31vh] right-0">
+                    <h1 className="text-[5vh] xl:text-[6.5vh] font-garamond md:text-black tracking-tight lg:static absolute sm:top-[38vh] top-[31vh] right-0">
                         Sobre <span className="text-[#667561]">mim</span>
                     </h1>
                     <h2 className="text-black xl:text-[1.98vh] lg:text-[1.50vh] flex flex-col gap-[18px] tracking-tight text-justify leading-tight lg:bg-transparent lg:rounded-none lg:p-0 lg:shadow-none
