@@ -1,11 +1,11 @@
-import NavbarComponent from "./navbar";
+import NavbarComponent from "./coverNavbar";
 import { Button } from "@heroui/button";
 import { RiShareBoxLine } from "react-icons/ri";
 
 export default function Cover() {
 
     return (
-        <section className="h-[102dvh] text-white rounded-b-3xl px-10 relative flex justify-center text-center overflow-hidden px-30" >
+        <section className="h-[100dvh] -mb-36 text-white rounded-b-3xl px-10 relative flex justify-center text-center overflow-hidden px-30" >
             <NavbarComponent />
             <div className="sm:max-w-[75vw] max-w-[85vw] flex">
                 <div className="flex flex-col lg:w-[500px] lgxl:w-[700px] text-left gap-3 mt-auto mb-60">

@@ -9,14 +9,14 @@ export default function NavbarComponent() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className={`absolute z-20 bg-[#8c947d] w-full mt-6 sm:max-w-[90vw] max-w-[85vw] top-3 justify-self-center text-xl sm:flex lg:h-[65px] h-[50px] transition-collors duration-500 lg:px-4 flex justify-between items-center px-6`}>
-            <div className="xl:w-[12vw]">
+        <nav className={`absolute z-20 bg-[#8c947d] w-full mt-6 sm:max-w-[80vw] max-w-[85vw] justify-self-center text-xl sm:flex lg:h-[65px] h-[50px] transition-collors duration-500 lg:px-4 flex items-center`}>
+            <div className="xl:w-[200px] lg:w-[198px] ">
                 <img src="/assets/logo.png" className="lg:h-[50px] xl:h-[60px] flex md:px-4 justify-center cursor-default" />
             </div>
             <div className="hidden flex lg:flex xl:gap-[70px] justify-self-center mx-auto" >
                 {navItems.map((item) => (
                     <div key={item.label}>
-                        <Link color="foreground" href={item.href} className="lg:text-[16px] xl:text-[22px] relative group">
+                        <Link color="foreground" href={item.href} className="lg:text-[16px] xl:text-[18px] relative group">
                             <p className="text-white">{item.label}</p>
                             <span className={`absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full z-0`} />
                         </Link>
@@ -24,7 +24,7 @@ export default function NavbarComponent() {
                 ))}
             </div>
             <div>
-                <Button radius="md" className={`lg:w-[198px] lg:h-[37px] xl:h-[50px] xl:w-[250px] lg:text-[16px] xl:text-[22px] lg:flex hidden bg-[#A3B18A] text-white`}>Entrar em contato</Button>
+                <Button radius="md" className={`lg:w-[198px] lg:h-[37px] xl:h-[45px] xl:w-[200px] lg:text-[16px] xl:text-[18px] lg:flex hidden bg-[#A3B18A] text-white`}>Entrar em contato</Button>
                 <button className="bg-transparent text-white lg:hidden leading-none transition transform active:scale-85 flex place-self-center" onClick={() => setIsMenuOpen(!isMenuOpen)}><IoIosMenu size={30} /></button>
             </div>
             {isMenuOpen && (
